@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rh-consumer" />
+        <module name="rh-api" />
+        <module name="rh-provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rh-api" target="1.8" />
+      <module name="rh-consumer" target="1.8" />
+      <module name="rh-provider" target="1.8" />
+      <module name="rpghelper" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="rh-api" options="-parameters" />
+      <module name="rh-consumer" options="-parameters" />
+      <module name="rh-provider" options="-parameters" />
+      <module name="rpghelper" options="-parameters" />
+    </option>
+  </component>
+</project>
