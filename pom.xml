@@ -24,6 +24,7 @@
         <module>rh-consumer</module>
         <module>rh-api</module>
         <module>rh-provider</module>
+        <module>rh-kafka</module>
     </modules>
 
     <dependencyManagement>
