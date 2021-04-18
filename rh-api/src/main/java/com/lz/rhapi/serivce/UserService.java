@@ -1,5 +1,6 @@
 package com.lz.rhapi.serivce;
 
+import com.lz.rhapi.pojo.Res;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,4 +14,10 @@ public interface UserService {
      * @return
      */
     Integer returnTest();
+
+    /**
+     * 用户注册
+     * @return
+     */
+    Res userRegistry();
 }
