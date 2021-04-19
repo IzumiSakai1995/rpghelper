@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/rh-provider/pom.xml" />
         <option value="$PROJECT_DIR$/rh-api/pom.xml" />
         <option value="$PROJECT_DIR$/rh-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/rh-web/pom.xml" />
       </list>
     </option>
   </component>

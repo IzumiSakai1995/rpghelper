@@ -1,10 +1,11 @@
 server:
-  port: 8002
+  port: 8080
 
 
 dubbo:
   application:
     name: consumer
+    id: consumer
 
   registry:
     address: zookeeper://120.48.9.61:2181

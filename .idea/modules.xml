@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/rh-api/rh-api.iml" filepath="$PROJECT_DIR$/rh-api/rh-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/rh-consumer/rh-consumer.iml" filepath="$PROJECT_DIR$/rh-consumer/rh-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rh-kafka/rh-kafka.iml" filepath="$PROJECT_DIR$/rh-kafka/rh-kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/rh-provider/rh-provider.iml" filepath="$PROJECT_DIR$/rh-provider/rh-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rh-web/rh-web.iml" filepath="$PROJECT_DIR$/rh-web/rh-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/rpghelper.iml" filepath="$PROJECT_DIR$/rpghelper.iml" />
     </modules>
   </component>

@@ -5,6 +5,7 @@ dubbo:
   application:
     #注册在注册中心的名称，唯一标识，请勿重复
     name: provider
+    id: provider
   #单zookeeper服务：zookeeper://127.0.0.1:2181
   registry:
     address: zookeeper://120.48.9.61:2181
@@ -20,8 +21,7 @@ dubbo:
 
   scan:
     base-packages: com.lz.rhprovider.Service
-  provider:
-    register: true
+
 
 
 
