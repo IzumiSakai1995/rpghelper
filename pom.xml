@@ -22,11 +22,10 @@
         <rh.version>0.0.1-SNAPSHOT</rh.version>
     </properties>
     <modules>
-        <module>rh-consumer</module>
+        <module>user-consumer</module>
         <module>rh-api</module>
-        <module>rh-provider</module>
-        <module>rh-kafka</module>
-        <module>rh-web</module>
+        <module>user-provider</module>
+        <module>rh-dao</module>
     </modules>
 
     <dependencyManagement>
@@ -49,15 +48,6 @@
 
         </dependencies>
     </dependencyManagement>
-
-<!--    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>-->
 
 
 </project>
