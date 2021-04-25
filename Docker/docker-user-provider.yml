@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  user-provider:
+    build:
+      context: .
+      dockerfile: Dockerfile-user-provider
+    restart: always # 开机自启动，docker启动则此容器启动
+    image: user-provider
+    container_name: user-provider
+    ports:
+    - 8886:8886

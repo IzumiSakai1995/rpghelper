@@ -19,12 +19,13 @@
         <java.version>1.8</java.version>
         <dubbo.version>2.7.10</dubbo.version>
         <zk.version>3.5.7</zk.version>
+        <rh.version>0.0.1-SNAPSHOT</rh.version>
     </properties>
     <modules>
-        <module>rh-consumer</module>
+        <module>user-consumer</module>
         <module>rh-api</module>
-        <module>rh-provider</module>
-        <module>rh-kafka</module>
+        <module>user-provider</module>
+        <module>rh-dao</module>
     </modules>
 
     <dependencyManagement>
@@ -43,16 +44,10 @@
                 <version>${zk.version}</version>
             </dependency>
 
+
+
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
