@@ -18,6 +18,13 @@ dubbo:
     #暴露服务端口 （默认是20880，修改端口，不同的服务提供者端口不能重复）
     port: 20880
 
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@120.48.9.61:1521:xe
+    username: liuzheng
+    password: 102355
+
 
 
 

@@ -14,20 +14,18 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
     @Bean
-    public Docket createDocket() {
+    public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
+                .pathMapping("/")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.yunnuo.demo.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.nvn.controller"))
                 .paths(PathSelectors.any())
-                .build();
-    }
-
-    public ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title("MyBatis + SqLite 简单项目程序")
-                .termsOfServiceUrl("小诺大人")
-                .version("1.0")
-                .build();
+                .build().apiInfo(new ApiInfoBuilder()
+                        .title("SpringBoot整合Swagger")
+                        .description("SpringBoot整合Swagger，详细信息......")
+                        .version("9.0")
+                        .license("The Apache License")
+                        .licenseUrl("http://www.baidu.com")
+                        .build());
     }
 }
