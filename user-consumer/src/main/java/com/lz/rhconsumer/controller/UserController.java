@@ -22,6 +22,13 @@ public class UserController implements CommandLineRunner {
         System.out.println(userService.returnTest());
     }
 
+    @ApiOperation("用户登录")
+    @PostMapping("login")
+    public String userLogin(User user){
+        System.out.println(user);
+        return "";
+    }
+
 
     @ApiOperation("用户插入")
     @PostMapping("registry")
