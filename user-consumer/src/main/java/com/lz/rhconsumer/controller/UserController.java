@@ -3,10 +3,15 @@ package com.lz.rhconsumer.controller;
 import com.lz.rhapi.pojo.User;
 import com.lz.rhapi.serivce.UserService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +29,7 @@ public class UserController implements CommandLineRunner {
 
     @ApiOperation("用户登录")
     @PostMapping("login")
-    public String userLogin(User user){
+    public String userLogin(@RequestBody String user){
         System.out.println(user);
         return "";
     }
@@ -32,7 +37,7 @@ public class UserController implements CommandLineRunner {
 
     @ApiOperation("用户插入")
     @PostMapping("registry")
-    public String userRegisty(User user){
+    public String userRegisty(@RequestBody User user){
         userService.userRegistry(user);
         return "";
     }
