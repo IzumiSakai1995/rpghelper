@@ -1,4 +1,4 @@
-package com.lz.rhapi.pojo;
+package com.lz.rhapi.user.entity;
 
 
 

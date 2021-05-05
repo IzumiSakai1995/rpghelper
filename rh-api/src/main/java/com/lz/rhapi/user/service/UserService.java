@@ -1,7 +1,7 @@
-package com.lz.rhapi.serivce;
+package com.lz.rhapi.user.service;
 
-import com.lz.rhapi.pojo.Res;
-import com.lz.rhapi.pojo.User;
+import com.lz.rhapi.common.Res;
+import com.lz.rhapi.user.entity.User;
 import org.springframework.stereotype.Component;
 
 /**
@@ -28,4 +28,13 @@ public interface UserService {
      */
     Res userLogin();
 
+    /**
+     * 用户登录
+     *
+     * @param user
+     * @return
+     */
+    Res userLogin(User user);
+
+    Res userDel(String uId);
 }
