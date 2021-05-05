@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableDubbo
 @SpringBootApplication
-@MapperScan("com.lz.rhdatabase.dao.userdao")
+@MapperScan("com.lz.userprovider.user.mapper")
 public class UserProviderApplication {
 
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
 package com.lz.rhapi.game.service;
 
+import com.lz.rh.common.core.api.Res;
 import com.lz.rhapi.game.entitiy.Game;
-import com.lz.rhapi.common.Res;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,5 +1,4 @@
-import { ref } from "vue";
-
+import {ref} from 'vue';
 import {User} from '../interface/pojo'
 export const loginUser = ref<User>({
   email: "",

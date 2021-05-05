@@ -1,6 +1,6 @@
 package com.lz.rhapi.character.service;
 
-import com.lz.rhapi.common.Res;
+import com.lz.rh.common.core.api.Res;
 import org.springframework.stereotype.Component;
 
 @Component

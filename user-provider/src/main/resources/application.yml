@@ -25,7 +25,11 @@ spring:
     username: liuzheng
     password: 102355
 
-
-
-
+mybatis:
+  # model的包
+  type-aliases-package: com.lz.rhapi
+  configuration:
+    # 开启驼峰uName自动映射到u_name
+    map-underscore-to-camel-case: on
+  mapper-locations: classpath*:com/lz/userprovider/user/mapper/sqlMapperXml/*.xml
 

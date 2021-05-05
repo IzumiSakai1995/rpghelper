@@ -1,5 +1,6 @@
-package com.lz.rhdatabase.dao.userdao;
+package com.lz.userprovider.user.mapper;
 
+import com.lz.rh.common.core.api.Res;
 import com.lz.rhapi.user.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
@@ -7,14 +8,15 @@ import org.springframework.stereotype.Component;
 /**
  * 用户dao
  */
-@Mapper
+
 @Component
+@Mapper
 public interface UserMapper {
     String userInsert(User user);
-
-    String userDel();
 
     String userQuery();
 
     String userDel(String uId);
+
+    Res userUpdate(User user);
 }

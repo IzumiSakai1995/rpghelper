@@ -1,6 +1,6 @@
 package com.lz.rhapi.user.service;
 
-import com.lz.rhapi.common.Res;
+import com.lz.rh.common.core.api.Res;
 import com.lz.rhapi.user.entity.User;
 import org.springframework.stereotype.Component;
 
@@ -36,5 +36,19 @@ public interface UserService {
      */
     Res userLogin(User user);
 
+    /**
+     * 用户删除
+     *
+     * @param uId
+     * @return
+     */
     Res userDel(String uId);
+
+    /**
+     * 用户更新
+     *
+     * @param user
+     * @return
+     */
+    Res userUpdate(User user);
 }

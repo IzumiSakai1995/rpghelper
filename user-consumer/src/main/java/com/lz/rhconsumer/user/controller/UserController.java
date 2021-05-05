@@ -1,6 +1,8 @@
-package com.lz.rhconsumer.controller;
+package com.lz.rhconsumer.user.controller;
 
-import com.lz.rhapi.common.Res;
+import com.lz.rh.common.core.api.Res;
+import com.lz.rh.common.core.utils.BeanConvertUtil;
+import com.lz.rhapi.user.dto.UserDto;
 import com.lz.rhapi.user.entity.User;
 import com.lz.rhapi.user.service.UserService;
 import io.swagger.annotations.Api;
@@ -37,7 +39,8 @@ public class UserController implements CommandLineRunner {
 
     @ApiOperation("用户注册")
     @PostMapping("registry")
-    public String userRegistry(@RequestBody User user){
+    public String userRegistry(@RequestBody UserDto userDto){
+        User user = BeanConvertUtil.convertBean(userDto,User.class);
         userService.userRegistry(user);
         return "";
     }
@@ -52,6 +55,7 @@ public class UserController implements CommandLineRunner {
     @ApiOperation("用户修改")
     @PutMapping("update")
     public Res userUpdate(@RequestBody User user){
+        userService.userUpdate(user);
         return new Res();
     }
 

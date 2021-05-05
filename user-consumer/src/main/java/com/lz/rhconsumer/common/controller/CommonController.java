@@ -1,4 +1,4 @@
-package com.lz.rhconsumer.controller;
+package com.lz.rhconsumer.common.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
