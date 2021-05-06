@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Res userRegistry(User user) {
-        Object obj = userMapper.userInsert(user);
+        Integer ret = userMapper.userInsert(user);
         return null;
     }
 

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Mapper
 public interface UserMapper {
-    String userInsert(User user);
+    Integer userInsert(User user);
 
     String userQuery();
 
