@@ -22,6 +22,11 @@ public class Res<T> {
         this.msg = msg;
     }
 
+    public Res(Integer code,T data){
+        this.code = code;
+        this.data = data;
+    }
+
     /**
      * 成功返回结果
      *

@@ -1,14 +1,18 @@
 package com.lz.rhapi.character.entity;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 
-public class Character implements Serializable {
-    String id;
+@ApiModel("角色")
+public class CharacterEntity implements Serializable {
+    Long id;
 
     /**
      * 所属游戏id
      */
-    String gameId;
+    String gId;
 
     /**
      * 角色名
@@ -29,7 +33,7 @@ public class Character implements Serializable {
     public String toString() {
         return "Character{" +
                 "id='" + id + '\'' +
-                ", gameId='" + gameId + '\'' +
+                ", gId='" + gId + '\'' +
                 ", name='" + name + '\'' +
                 ", star='" + star + '\'' +
                 ", avatarUrl='" + avatarUrl + '\'' +
@@ -37,21 +41,20 @@ public class Character implements Serializable {
     }
 
 
-
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getGameId() {
-        return gameId;
+    public String getgId() {
+        return gId;
     }
 
-    public void setGameId(String gameId) {
-        this.gameId = gameId;
+    public void setgId(String gId) {
+        this.gId = gId;
     }
 
     public String getName() {

@@ -7,7 +7,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 @ApiModel("用户类")
-public class User implements Serializable {
+public class UserEntity implements Serializable {
     @ApiModelProperty("主键id")
     Integer id;
     @ApiModelProperty("用户名")

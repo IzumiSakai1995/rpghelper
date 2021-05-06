@@ -42,7 +42,7 @@
             </resource>
         </resources>
 <!--        包名称-->
-        <finalName>user-provider</finalName>
+        <finalName>userEntity-provider</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

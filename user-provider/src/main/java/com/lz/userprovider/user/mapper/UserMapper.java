@@ -1,7 +1,6 @@
 package com.lz.userprovider.user.mapper;
 
-import com.lz.rh.common.core.api.Res;
-import com.lz.rhapi.user.entity.User;
+import com.lz.rhapi.user.entity.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
@@ -12,11 +11,11 @@ import org.springframework.stereotype.Component;
 @Component
 @Mapper
 public interface UserMapper {
-    Integer userInsert(User user);
+    Integer userInsert(UserEntity user);
 
     String userQuery();
 
     String userDel(String uId);
 
-    Res userUpdate(User user);
+    Integer userUpdate(UserEntity user);
 }

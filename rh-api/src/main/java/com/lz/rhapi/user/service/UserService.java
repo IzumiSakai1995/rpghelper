@@ -1,8 +1,11 @@
 package com.lz.rhapi.user.service;
 
 import com.lz.rh.common.core.api.Res;
-import com.lz.rhapi.user.entity.User;
+import com.lz.rhapi.user.dto.UserDto;
+import com.lz.rhapi.user.entity.UserEntity;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * 用户接口
@@ -20,7 +23,7 @@ public interface UserService {
      * 用户注册
      * @return
      */
-    Res userRegistry(User user);
+    Res userRegistry(UserEntity userEntity);
 
     /**
      * 用户登录
@@ -31,10 +34,18 @@ public interface UserService {
     /**
      * 用户登录
      *
-     * @param user
+     * @param userEntity
      * @return
      */
-    Res userLogin(User user);
+    Res userLogin(UserEntity userEntity);
+
+    /**
+     * 用户登录
+     *
+     * @param userDto
+     * @return
+     */
+    Res userLogin(UserDto userDto);
 
     /**
      * 用户删除
@@ -47,8 +58,26 @@ public interface UserService {
     /**
      * 用户更新
      *
-     * @param user
+     * @param userEntity
      * @return
      */
-    Res userUpdate(User user);
+    Res userUpdate(UserEntity userEntity);
+
+    /**
+     * 批量用户查询
+     * @param uIds
+     * @return
+     */
+    List<UserEntity> userQuery(String[] uIds);
+
+    /**
+     * 使用邮箱或者用户名及密码查询用户，用于登录
+     *
+     * @param userDto
+     * @return
+     */
+    Res userQuery(UserDto userDto);
+
+
+    Res<List<UserEntity>> userQuery();
 }

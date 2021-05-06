@@ -6,6 +6,7 @@ dubbo:
     #注册在注册中心的名称，唯一标识，请勿重复
     name: user-provider
     id: user-provider
+
   #单zookeeper服务：zookeeper://127.0.0.1:2181
   registry:
     address: zookeeper://120.48.9.61:2181
@@ -17,6 +18,8 @@ dubbo:
     name: dubbo
     #暴露服务端口 （默认是20880，修改端口，不同的服务提供者端口不能重复）
     port: 20880
+  provider:
+    timeout: 10000
 
 spring:
   datasource:
