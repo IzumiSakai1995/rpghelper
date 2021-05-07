@@ -15,6 +15,11 @@ const routes = [
         path: '/:catchAll(.*)',
         name: '404',
         component:()=>import('../errors/404.vue')
+    },
+    {
+        path: '/admin',
+        name: 'admin',
+        component:()=>import('../views/Admin.vue')
     }
     
 ]
