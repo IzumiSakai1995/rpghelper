@@ -12,15 +12,11 @@
     <artifactId>rh-common-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>rh-common-core</name>
+    <packaging>jar</packaging>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-        <!-- apache.commons begin -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
 
         <!-- httpclient begin -->
         <dependency>

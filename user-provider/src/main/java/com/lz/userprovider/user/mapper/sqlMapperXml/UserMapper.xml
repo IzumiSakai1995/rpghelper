@@ -3,16 +3,23 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lz.userprovider.user.mapper.UserMapper">
+    <!-- insert user -->
     <insert id="userInsert" parameterType="com.lz.rhapi.user.entity.UserEntity">
         insert into t_user(NAME,EMAIL,PASSWORD) values (#{name},#{email},#{password})
     </insert>
+    <!-- delete user by userId  -->
     <delete id="userDel">
         delete from t_user where u_id = {uId}
+
     </delete>
-    <select id="userQuery" resultType="java.lang.String">
+    <!-- query user for login -->
+    <select id="userQuery" resultType="com.lz.rhapi.user.entity.UserEntity">
         select * from t_user where uid = {u_id}
     </select>
+    <!-- query all users -->
+    <select id="usersQuery" resultType="com.lz.rhapi.user.entity.UserEntity"></select>
 
+    <!-- user update  -->
     <update id="userUpdate">
 
     </update>

@@ -13,31 +13,13 @@ import java.util.List;
 
 @Component
 public interface UserService {
-    /**
-     * 接口测试
-     * @return
-     */
-    Integer returnTest();
+
 
     /**
      * 用户注册
      * @return
      */
     Res userRegistry(UserEntity userEntity);
-
-    /**
-     * 用户登录
-     * @return
-     */
-    Res userLogin();
-
-    /**
-     * 用户登录
-     *
-     * @param userEntity
-     * @return
-     */
-    Res userLogin(UserEntity userEntity);
 
     /**
      * 用户登录

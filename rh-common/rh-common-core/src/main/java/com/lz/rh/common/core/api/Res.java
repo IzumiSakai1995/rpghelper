@@ -13,9 +13,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Res<T> {
-    private Integer code;
+
+    /**
+     * network code
+     */
+    private Integer code = ResultCode.SUCCESS.getCode();
     private String msg;
     private T data;
+    private boolean businessCode = true;
 
     public Res(Integer code, String msg) {
         this.code = code;
@@ -24,6 +29,43 @@ public class Res<T> {
 
     public Res(Integer code,T data){
         this.code = code;
+        this.data = data;
+    }
+
+    public Res(Integer code, String message, T data) {
+        this.code = code;
+        this.msg = message;
+        this.data = data;
+    }
+
+    public Res(String message,T data){
+        this.msg = message;
+        this.data = data;
+    }
+
+    /**
+     * @param businessCode 业务结果返回值
+     * @param message 业务消息
+     * @param data 数据
+     */
+    public Res(boolean businessCode,String message, T data){
+        this.businessCode = businessCode;
+        this.msg = message;
+        this.data = data;
+    }
+
+    /**
+     * 返回业务结果及消息
+     *
+     * @param businessCode
+     * @param message
+     */
+    public Res(boolean businessCode,String message){
+        this.businessCode = businessCode;
+        this.msg = message;
+    }
+
+    public Res(T data) {
         this.data = data;
     }
 

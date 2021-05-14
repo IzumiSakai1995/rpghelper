@@ -23,9 +23,16 @@ public class UserController implements CommandLineRunner {
     private UserService userService;
 
 
+    /**
+     * 在应用服务启动时，需要在所有Bean生成之后，加载一些数据和执行一些应用的初始化。
+     * 例如：删除临时文件，清楚缓存信息，读取配置文件，数据库连接，这些工作类似开机自启动的概念，
+     * CommandLineRunner、ApplicationRunner 接口是在容器启动成功后的最后一步回调
+     * （类似开机自启动）。
+     * @param args
+     */
     @Override
     public void run(String... args) {
-        System.out.println(userService.returnTest());
+        System.out.println("");
     }
 
     @ApiOperation("用户登录")
@@ -69,6 +76,12 @@ public class UserController implements CommandLineRunner {
     @PutMapping("update")
     public Res userUpdate(@RequestBody UserEntity userEntity){
         userService.userUpdate(userEntity);
+        return new Res();
+    }
+
+    @ApiOperation("用户查重")
+    @PostMapping("queryForReg")
+    public Res queryForReg(UserDto userDto){
         return new Res();
     }
 

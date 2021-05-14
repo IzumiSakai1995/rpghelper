@@ -19,5 +19,10 @@ public class AccountController {
         return new Res(ResultCode.SUCCESS.getCode(),"添加成功");
     }
 
+    @PostMapping("query")
+    public Res accountQuery(String uId){
+        return new Res();
+    }
+
 
 }
