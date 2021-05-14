@@ -21,4 +21,4 @@ jobs:
     - name: debug
       run: ls && pwd
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean install -Dmaven.test.skip=true
