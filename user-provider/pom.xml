@@ -50,7 +50,6 @@
 <!--                添加启动类路径-->
                 <configuration>
                     <mainClass>com.lz.userprovider.UserProviderApplication</mainClass>
-                    <outputDirectory>/Docker</outputDirectory>
                 </configuration>
 
             </plugin>
