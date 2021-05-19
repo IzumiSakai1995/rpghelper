@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lz.userprovider.user.mapper.UserMapper">
+<mapper namespace="com.lz.provider.user.mapper.UserMapper">
     <!-- insert user -->
     <insert id="userInsert" parameterType="com.lz.rhapi.user.entity.UserEntity">
         insert into t_user(NAME,EMAIL,PASSWORD) values (#{name},#{email},#{password})

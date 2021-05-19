@@ -1,4 +1,4 @@
-package com.lz.userprovider.user.mapper;
+package com.lz.provider.user.mapper;
 
 import com.lz.rhapi.user.dto.UserDto;
 import com.lz.rhapi.user.entity.UserEntity;

@@ -1,12 +1,11 @@
-package com.lz.userprovider.user.service.impl;
+package com.lz.provider.user.service.impl;
 
 import com.lz.rh.common.core.api.Res;
 import com.lz.rh.common.core.api.ResultCode;
 import com.lz.rhapi.user.dto.UserDto;
 import com.lz.rhapi.user.entity.UserEntity;
 import com.lz.rhapi.user.service.UserService;
-import com.lz.userprovider.user.mapper.UserMapper;
-import org.apache.catalina.User;
+import com.lz.provider.user.mapper.UserMapper;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.ibatis.jdbc.Null;
 import org.springframework.stereotype.Component;

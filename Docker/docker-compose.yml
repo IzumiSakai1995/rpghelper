@@ -1,0 +1,22 @@
+version: "3"
+  services:
+    provider:
+      build:
+        context: ../
+        dockerfile: ./provider/Dockerfile
+
+      image: provider
+      ports:
+        - 8085:8085
+
+      container_name: provider
+
+    consumer:
+      build:
+        context: ../
+        dockerfile: ./consumer/Dockerfile
+
+      image: consumer
+      ports:
+        - 8083:8083
+      container_name: consumer

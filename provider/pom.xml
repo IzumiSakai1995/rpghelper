@@ -42,14 +42,14 @@
             </resource>
         </resources>
 <!--        包名称-->
-        <finalName>user-provider</finalName>
+        <finalName>provider</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
 <!--                添加启动类路径-->
                 <configuration>
-                    <mainClass>com.lz.userprovider.UserProviderApplication</mainClass>
+                    <mainClass>com.lz.provider.UserProviderApplication</mainClass>
                 </configuration>
 
             </plugin>
