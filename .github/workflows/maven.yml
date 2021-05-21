@@ -29,9 +29,11 @@ jobs:
         password: ${{secrets.PASSWORD}}
         port: 22
         script: |
-          cd /usr/local/docker/proj
-          rm -rf ./*
-          git clone https://github.com/IzumiSakai1995/rpghelper.git
-          cd rpghelper
-         #docker-compose up -d --build
+          pwd
+          ls -la
+          #cd /usr/local/docker/proj
+          #rm -rf ./*
+          #git clone https://github.com/IzumiSakai1995/rpghelper.git
+          #cd rpghelper
+          #docker-compose up -d --build
 
