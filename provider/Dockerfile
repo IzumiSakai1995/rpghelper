@@ -1,15 +1,6 @@
 FROM maven:3-openjdk-8
-RUN mkdir -p /source/provider
-ADD . /source/provider
-WORKDIR /source/provider
 
-RUN mvn --batch-mode clean package -Dmaven.test.skip=true
-
-FROM openjdk:8-jre
-LABEL maintainer="dev@dubbo.apache.org"
-RUN pwd && ls -a
-COPY --from=0 /source/provider/provider/target/provider.jar /app.jar
-
+ADD ./provider/target/provider.jar /app.jar
 ENV JAVA_OPTS = ""
 
 #ENTRYPOINT ["tini", "--", "/usr/local/bin/entrypoint.sh"]

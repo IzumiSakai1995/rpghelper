@@ -37,7 +37,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <!--                添加启动类路径-->
                 <configuration>
-                    <mainClass>com.lz.provider.UserProviderApplication</mainClass>
+                    <mainClass>com.lz.rhconsumer.UserConsumerApplication</mainClass>
                 </configuration>
 
             </plugin>

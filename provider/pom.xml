@@ -34,9 +34,10 @@
     <build>
         <resources>
             <resource>
-                <directory>src/main/java</directory>
+                <directory>src/main/</directory>
                 <includes>
                     <include>**/*.xml</include>
+                    <include>**/*.yml</include>
                 </includes>
                 <filtering>false</filtering>
             </resource>
