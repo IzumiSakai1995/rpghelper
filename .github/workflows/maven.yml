@@ -27,7 +27,7 @@ jobs:
         host: ${secrets.HOST}
         username: ${secrets.USERNAME}
         password: ${secrets.PASSWORD}
-        port: ${secrets.PORT}
+        port: 22
         script: |
           cd /usr/local/docker/proj
           rm -rf ./rpghelper
