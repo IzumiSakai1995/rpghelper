@@ -24,7 +24,7 @@ jobs:
     - name: Deploy
       uses: appleboy/ssh-action@master #使用ssh连接服务器
       with:
-        host: ${secrets.HOST}
+        host: 120.48.9.61
         username: ${secrets.USERNAME}
         password: ${secrets.PASSWORD}
         port: 22
