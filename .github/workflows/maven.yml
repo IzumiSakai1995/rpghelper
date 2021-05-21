@@ -30,8 +30,8 @@ jobs:
         port: 22
         script: |
           cd /usr/local/docker/proj
-          rm -rf ./rpghelper
+          rm -rf ./*
           git clone https://github.com/IzumiSakai1995/rpghelper.git
           cd rpghelper
-          docker-compose up -d --build
+         #docker-compose up -d --build
 
