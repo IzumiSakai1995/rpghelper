@@ -22,25 +22,11 @@ jobs:
       run: mvn clean install -Dmaven.test.skip=true
 
     - name: Deploy
-      uses: kostya-ten/ssh-server-deploy@v4 #使用ssh连接服务器
-      with:
-        host: ${{secrets.HOST}}
-        username: ${{secrets.USERNAME}}
-        password: ${{secrets.PASSWORD}}
-        port: ${{secrets.PORT}}
-        scp_source: ./*
-        scp_target: /usr/local/docker/proj
-        before_script: |
-          ls
-          pwd
-        after_script: |
-          pwd
-          ls
-          cd /usr/local/docker/proj
-          ls 
-          #rm -rf ./*
-          #git clone https://github.com/IzumiSakai1995/rpghelper.git
-          #cd rpghelper
-          #mvn clear install -Dmaven.test.skip=true
-          #docker-compose up -d --build
+      uses: easingthemes/ssh-deploy@v2.1.5 #使用ssh连接服务器
+      env:
+        SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+        SOURCE: "./"
+        REMOTE_HOST: ${{secrets.HOST}}
+        REMOTE_USER: ${{secrets.USERNAME}}
+        TARGET: /usr/local/docker/proj
 
