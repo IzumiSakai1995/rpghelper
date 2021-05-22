@@ -31,16 +31,16 @@ jobs:
         scp_source: README.md
         scp_target: /usr/local/docker/proj
         before_script: |
-          ls -la
+          ls
           pwd
-          df -h
         after_script: |
           pwd
-          ls -la
+          ls
           cd /usr/local/docker/proj
-          rm -rf ./*
+          ls 
+          #rm -rf ./*
           #git clone https://github.com/IzumiSakai1995/rpghelper.git
           #cd rpghelper
-          mvn clear install -Dmaven.test.skip=true
-          docker-compose up -d --build
+          #mvn clear install -Dmaven.test.skip=true
+          #docker-compose up -d --build
 
