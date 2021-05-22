@@ -20,22 +20,19 @@ jobs:
         distribution: 'adopt'
     #- name: Build with Maven
      # run: mvn clean install -Dmaven.test.skip=true
-    - name: Prepare ssh
-      run: >
-        cd ~ && mkdir .ssh &&
-        touch ~/.ssh/known_hosts &&
-        ssh-keyscan -H "$IP" >>~/.ssh/known_hosts
-      env: 
-        IP: ${{secrets.IP}}
 
     - name: Deploy
-      uses: easingthemes/ssh-deploy@v2.1.5 #使用ssh连接服务器
-      env:
-        SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-        ARGS: "-rltgoDzvO --delete"
-        TARGET: ~/
-        REMOTE_HOST: ${{secrets.HOST}}
-        REMOTE_USER: ${{secrets.USERNAME}}
-        SOURCE: "./"
-        
+      uses: appleboy/ssh-action@master #使用ssh连接服务器
+      with:
+        host: ${{secrets.HOST}}
+        username: ${{secrets.USERNAME}}
+        password: ${{secrets.PASSWORD}}
+        port: ${{secrets.PORT}}
+        script: |
+          cd /usr/local/docker/proj
+          rm -rf ./*
+          git clone https://github.com/IzumiSakai1995/rpghelper.git
+          cd rpghelper
+          mvn clear install -Dmaven.test.skip=true
+          docker-compose up -d --build
 
