@@ -3,7 +3,7 @@ services:
   provider:
     build:
       context: ./
-      dockerfile: ./provider/Dockerfile
+      dockerfile: ./provider/Dockerfile-maven
     image: provider
     ports:
       - 8085:8085
@@ -13,7 +13,7 @@ services:
   consumer:
     build:
       context: ./
-      dockerfile: ./consumer/Dockerfile
+      dockerfile: ./consumer/Dockerfile-maven
 
     image: consumer
     ports:
