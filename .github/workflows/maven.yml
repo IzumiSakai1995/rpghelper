@@ -38,9 +38,7 @@ jobs:
           ls
           cd /usr/local/docker/proj
           ls 
-          #rm -rf ./*
-          #git clone https://github.com/IzumiSakai1995/rpghelper.git
-          #cd rpghelper
-          #mvn clear install -Dmaven.test.skip=true
-          #docker-compose up -d --build
+          rm -rf ./*
+          cd rpghelper
+          docker-compose up -d --build
 
