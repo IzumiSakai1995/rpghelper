@@ -22,16 +22,20 @@ jobs:
       run: mvn clean install -Dmaven.test.skip=true
 
     - name: Deploy
-      uses: appleboy/ssh-action@master #使用ssh连接服务器
+      uses: kostya-ten/ssh-server-deploy@v4 #使用ssh连接服务器
       with:
-        host: 120.48.9.61
+        host: ${{secrets.HOST}}
         username: ${{secrets.USERNAME}}
         password: ${{secrets.PASSWORD}}
-        port: 22
+        port: ${{secrets.PORT}}
+        scp_source: ./
+        scp_target: /usr/local/docker/proj
         script: |
+          pwd
+          ls -la
           cd /usr/local/docker/proj
           rm -rf ./*
-          git clone https://github.com/IzumiSakai1995/rpghelper.git
+         # git clone https://github.com/IzumiSakai1995/rpghelper.git
           cd rpghelper
           mvn clear install -Dmaven.test.skip=true
           docker-compose up -d --build
