@@ -28,9 +28,13 @@ jobs:
         username: ${{secrets.USERNAME}}
         password: ${{secrets.PASSWORD}}
         port: ${{secrets.PORT}}
-        scp_source: ./
+        scp_source: README.md
         scp_target: /usr/local/docker/proj
-        script: |
+        before_script: |
+          ls -la
+          pwd
+          df -h
+        after_script: |
           pwd
           ls -la
           cd /usr/local/docker/proj
