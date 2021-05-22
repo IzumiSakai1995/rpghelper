@@ -26,7 +26,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
         ARGS: "-rltgoDzvO --delete"
-        TARGET: /usr/local/docker/proj
+        TARGET: ~/
         REMOTE_HOST: ${{secrets.HOST}}
         REMOTE_USER: ${{secrets.USERNAME}}
         SOURCE: "./"
