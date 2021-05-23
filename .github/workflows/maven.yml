@@ -29,10 +29,8 @@ jobs:
         password: ${{secrets.PASSWORD}}
         port: ${{secrets.PORT}}
         script: |
-          cd /usr/local/docker/proj
-          rm -rf ./*
-          git clone https://hub.fastgit.org/IzumiSakai1995/rpghelper.git
-          cd rpghelper
+          cd /usr/local/docker/proj/rpghelper
+          git pull 
           mvn clear install -Dmaven.test.skip=true
           docker-compose up -d --build
 
