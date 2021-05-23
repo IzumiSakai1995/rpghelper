@@ -18,22 +18,19 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build with Maven
-      run: mvn clean install -Dmaven.test.skip=true
+    #- name: Build with Maven
+     # run: mvn clean install -Dmaven.test.skip=true
 
     - name: Deploy
       uses: appleboy/ssh-action@master #使用ssh连接服务器
       with:
-        host: 120.48.9.61
+        host: ${{secrets.HOST}}
         username: ${{secrets.USERNAME}}
         password: ${{secrets.PASSWORD}}
-        port: 22
+        port: ${{secrets.PORT}}
         script: |
-          pwd
-          ls -la
-          #cd /usr/local/docker/proj
-          #rm -rf ./*
-          #git clone https://github.com/IzumiSakai1995/rpghelper.git
-          #cd rpghelper
-          #docker-compose up -d --build
+          cd /usr/local/docker/proj/rpghelper
+          git pull 
+          mvn clear install -Dmaven.test.skip=true
+          docker-compose up -d --build
 
