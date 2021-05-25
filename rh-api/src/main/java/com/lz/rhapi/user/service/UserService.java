@@ -62,4 +62,6 @@ public interface UserService {
 
 
     Res<List<UserEntity>> userQuery();
+
+    Integer checkDuplicate(String email);
 }

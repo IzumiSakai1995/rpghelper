@@ -18,6 +18,9 @@
     </select>
     <!-- query all users -->
     <select id="usersQuery" resultType="com.lz.rhapi.user.entity.UserEntity"></select>
+    <select id="checkDuplicate" resultType="java.lang.Integer">
+        select count(1) from t_user where username = {email}
+    </select>
 
     <!-- user update  -->
     <update id="userUpdate">

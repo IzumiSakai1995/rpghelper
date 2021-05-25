@@ -103,5 +103,10 @@ public class UserServiceImpl implements UserService {
         return new Res<>(ResultCode.SUCCESS.getCode(),"成功");
     }
 
+    @Override
+    public Integer checkDuplicate(String email) {
+        return userMapper.checkDuplicate(email);
+    }
+
 
 }

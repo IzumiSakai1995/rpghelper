@@ -82,6 +82,8 @@ public class UserController implements CommandLineRunner {
     @ApiOperation("用户查重")
     @PostMapping("queryForReg")
     public Res queryForReg(UserDto userDto){
+        String email = userDto.getEmail();
+        Integer ret = userService.checkDuplicate(email);
         return new Res();
     }
 

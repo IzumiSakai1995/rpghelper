@@ -52,4 +52,6 @@ public interface UserMapper {
      * @return
      */
     UserEntity userQuery(UserDto userDto);
+
+    Integer checkDuplicate(String email);
 }
